@@ -1,0 +1,44 @@
+name: input workflow
+on:
+  workflow_dispatch:
+    inputs:
+      enviornment:
+        description: this is enviorment where workflow run
+        default: dev
+        required: true
+        type: choise
+        options:
+          - dev
+          - prod
+          - test
+          - deploy
+
+jobs:
+  
+  code:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: checkout code 
+        run: echo "code clone for github"
+
+
+  build:
+    needs: code
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Build docker container
+        run: echo "ocker container build"
+
+  text:
+    needs: build
+    runs-on: ubuntu-latest 
+    steps:
+      - name: test the container
+        run: echo "testing the container"
+
+  deploy:
+    needs: text
+    runs-on: ubuntu-latest 
+    steps:
+      - name: deploying the app
+        run: echo "my docker compose deployed the app"
