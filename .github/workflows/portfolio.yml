@@ -19,5 +19,16 @@ jobs:
         uses: actions/configure-pages@v4
       - name: upload statis file
         uses: actions/upload-pages-artifact@v4
+        with:
+         path: "."
       - name: Deploy to github page
         uses: actions/deploy-pages@v4
+
+
+
+
+
+
+
+
+
