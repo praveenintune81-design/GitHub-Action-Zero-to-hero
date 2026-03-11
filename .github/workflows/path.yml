@@ -1,0 +1,23 @@
+name: path workflow    # this is name for workflow 
+on:
+  push:
+    branches: [main]
+    paths:
+     - '**.html'
+  
+jobs:     # these are jobs inside the workflow
+  greet:    # this is name of job  
+    runs-on: ubuntu-latest  # this is gitlab runner
+    steps:
+      - name: say hello to user
+        run: echo "hello dosto"
+      - name: say hello to username
+        run: echo "hello $USER"
+  details:
+    needs: greet
+    runs-on: ubuntu-latest
+    steps:
+      - name: version of python, docker
+        run: |
+          docker --version 
+          python --version 
