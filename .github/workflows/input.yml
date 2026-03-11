@@ -4,9 +4,9 @@ on:
     inputs:
       enviornment:
         description: this is enviorment where workflow run
-        default: dev
+        default: 'dev'
         required: true
-        type: choise
+        type: choice
         options:
           - dev
           - prod
