@@ -1,10 +1,7 @@
 name: Hlo workflow    # this is name for workflow 
 on:
-  push:
-    branches:
-      - main
-      - dev
-      - test
+  workflow_dispatch: 
+ 
 jobs:     # these are jobs inside the workflow
   greet:    # this is name of job  
     runs-on: ubuntu-latest  # this is gitlab runner
