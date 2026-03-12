@@ -1,0 +1,54 @@
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+header{
+padding:50px;
+background:#020617;
+}
+
+.profile{
+width:150px;
+border-radius:50%;
+box-shadow:0 0 25px cyan;
+}
+
+.skills{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:50px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+transition:0.5s;
+transform: perspective(800px) rotateY(0deg);
+}
+
+.card img{
+width:80px;
+}
+
+.card:hover{
+transform: perspective(800px) rotateY(20deg);
+box-shadow:0 0 30px cyan;
+}
+
+.project{
+background:#1e293b;
+margin:20px;
+padding:20px;
+border-radius:10px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+background:#020617;
+}
